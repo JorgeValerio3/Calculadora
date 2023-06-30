@@ -1,0 +1,97 @@
+.converter{
+    padding: 2rem 0;
+}
+
+.converter_nums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    padding-bottom: 20px;
+}
+.converter_nums button{
+    color: #000;
+    font-size: 2rem;
+    padding: 25px;
+}
+
+.converter_calc{
+    display: flex;
+}
+.converter_calc div{
+    flex: 1;
+    padding: 2rem;
+}
+.converter_calc select{
+    width: 100%;
+}
+.converter_calc p{
+    font-size: 2rem;
+}
+
+
+
+.converter button:hover{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.converter button:active{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.ope{
+    background-color: #333c;
+}
+.num{
+    background-color: #844c;
+}
+.ope:hover{
+    background-color: #777e;
+}
+.num:hover{
+    background-color: #c77f;
+}
+.ope:active{
+    background-color: #777e;
+}
+.num:active{
+    background-color: #c77f;
+}
+.converter button{
+    border: 0;
+    outline: 0;
+}
+.converter button:hover{
+    color: #aaa;
+}
+.converter a{
+    padding: 10px;
+}
+/* loader */
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 1em calc(50% - 2em);
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px auto;
+    border-radius: 50%;
+    border: 6px solid #999;
+    border-color: #999 transparent #999 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }  
+.none{
+    display: none !important;
+}
