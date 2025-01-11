@@ -1,6 +1,6 @@
 export async function loadProgram(name = "standar", code = "Standar"/* name = "converter", code = " Currency" */) {
     const ls = localStorage;
-    await fetch(`https://jorgevalerio3.github.io/Calculadora/programs/${name}.html`)
+    await fetch(`./programs/${name}.html`)
             .then(res => res.text())
             .then(text => {
                 ls.setItem("SeccionCalculadora", `${name},${code}`);
