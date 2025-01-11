@@ -1,0 +1,519 @@
+/* ESTRUCTURA */
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    display: flex;
+}
+.header-div{
+    flex: 1;
+    display: flex;
+}
+.header-div-item{
+    padding: .9em 1.5em;
+    font-size: 1.5em;
+}
+.aside{
+    left: 0;
+    width: 20vw;
+    height: 91vh;
+    position: absolute;
+    transition: .3s left;
+    backdrop-filter: blur(10px);
+    background-color: rgba(85, 85, 85, 0.726);
+}
+.aside button,.aside h3{
+    width: 100%;
+    font-size: 1.2em;
+    background-color: transparent;
+    transition: .3s all;
+    outline: none;
+    text-align: left;
+    border: 1px solid transparent;
+}
+.aside button{
+    padding: 8px 20px;
+}
+.aside button:hover{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.aside button:active{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.lejos{
+    left: -150vw;
+}
+.none{
+    display: none;
+}
+.light{
+    background-color: #eee;
+    color: #000;
+}
+button{
+    color: #fff;
+    transition: .3s all;
+}
+.opacity_full{
+    opacity: 0;
+}
+@media (max-width: 900px) {
+    .header{
+        display: block;
+    }
+    .header .header-div{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+}
+
+/* CONVERTER */
+.converter{
+    padding: 2rem 0;
+}
+
+.converter_nums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    padding-bottom: 20px;
+}
+.converter_nums button{
+    color: #000;
+    font-size: 2rem;
+    padding: 25px;
+}
+
+.converter_calc{
+    display: flex;
+}
+.converter_calc div{
+    flex: 1;
+    padding: 2rem;
+}
+.converter_calc div p{
+    inline-size: 30vw;
+    overflow-wrap: break-word;
+}
+.converter_calc select{
+    width: 100%;
+}
+.converter_calc p{
+    font-size: 2rem;
+}
+
+
+
+.converter button:hover{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.converter button:active{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.ope{
+    background-color: #333c;
+}
+.num{
+    background-color: #844c;
+}
+.ope:hover{
+    background-color: #777e;
+}
+.num:hover{
+    background-color: #c77f;
+}
+.ope:active{
+    background-color: #777e;
+}
+.num:active{
+    background-color: #c77f;
+}
+.converter button{
+    border: 0;
+    outline: 0;
+}
+.converter button:hover{
+    color: #aaa;
+}
+.converter a{
+    padding: 10px;
+}
+/* loader */
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 1em calc(50% - 2em);
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px auto;
+    border-radius: 50%;
+    border: 6px solid #999;
+    border-color: #999 transparent #999 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }  
+.none{
+    display: none !important;
+}
+
+/* DATE_CALCULATION */
+.date_calculation{
+    text-align: center;
+}
+
+.date_calculation input, select{
+    padding: 5px;
+}
+
+#resSelect h4{
+    color: #F08E21;
+}
+
+/* SCIENTIFIC */
+main .scientific{
+    display: grid;
+    grid-template-areas: 
+        "calc memory" 
+        "nums memory" 
+        "nums memory"
+    ;
+    grid-template-columns: 80vw 1fr;
+}
+.scientific_calc{
+    grid-area: calc;
+    text-align: right;
+}
+.scientific_nums{
+    grid-area: nums;
+}
+.scientific_memory{
+    grid-area: memory;
+    text-align: left;
+    padding: .5em 2em;
+}
+#memory_zone {
+    text-align: right;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+#memory_zone article{
+    font-size: 1.5em;
+    padding: 1em;
+    margin: auto;
+    max-width: 6vw;
+    overflow-x: auto;
+}
+#memory_zone article:hover{
+    background-color: #777f;
+}
+.memory_zone-num-p{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.memory_zone-boton{
+    display: none;
+}
+.memory_zone-boton button{
+    font-size: .75em !important;
+}
+.scientific_calc div{
+    width: 80vw;
+    overflow-x: auto;
+}
+.scientific_calc h2{
+    font-weight: 900;
+    font-size: 3em;
+}
+.scientific_nums *{
+    font-size: 1.4em;
+}
+.scientific_nums{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-rows: 70px repeat(7, 90px);
+    grid-gap: 4px;
+}
+.scientific_nums .memory_buttons{
+    display: flex;
+}
+.scientific_nums .memory_buttons button{
+    flex: 1;
+    background-color: transparent;
+    transition: .3s all;
+}
+.scientific_nums .memory_buttons button:hover{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.scientific_nums .memory_buttons button:active{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.scientific_nums button{
+    border: 0;
+    outline: none;
+}
+.ope{
+    background-color: #333c;
+}
+.num{
+    background-color: #833c;
+}
+.ope:hover{
+    background-color: #777e;
+}
+.num:hover{
+    background-color: #c77f;
+}
+.ope:active{
+    background-color: #777e;
+}
+.num:active{
+    background-color: #c77f;
+}
+button{
+    color: #fff;
+    transition: .3s all;
+}
+.scientific_memory div button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.4em;
+}
+.scientific_memory_button-active{
+    border-bottom: 4px solid #822 !important;
+}
+.scientific_memory div button:hover{
+    color: #aaa;
+}
+.memory_buttone_query{
+    display: none;
+}
+.fa-trash-alt{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    main .scientific{
+        display: grid;
+        grid-template-areas: 
+            "calc calc" 
+            "nums nums" 
+            "nums nums"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+    .scientific_memory{
+        display: none;
+    }
+    .scientific_nums div:nth-child(2){
+        display: none;
+    }
+    .scientific_nums div:nth-child(3){
+        display: none;
+    }
+    .scientific_nums div:nth-child(4){
+        display: none;
+    }
+    .memory_buttone_query{
+        display: block;
+    }
+    .memory_buttons{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .scientific_calc div{
+        width: 95vw;
+        overflow-x: auto;
+    }
+}
+
+/* STANDAR */
+main .standar{
+    display: grid;
+    grid-template-areas: 
+        "calc memory" 
+        "nums memory" 
+        "nums memory"
+    ;
+    grid-template-columns: 80vw 1fr;
+}
+.standar_calc{
+    grid-area: calc;
+    text-align: right;
+}
+.standar_nums{
+    grid-area: nums;
+}
+.standar_memory{
+    grid-area: memory;
+    text-align: left;
+    padding: .5em 2em;
+}
+#memory_zone {
+    text-align: right;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+#memory_zone article{
+    font-size: 1.5em;
+    padding: 1em;
+    margin: auto;
+    max-width: 6vw;
+    overflow-x: auto;
+}
+#memory_zone article:hover{
+    background-color: #777f;
+}
+.memory_zone-num-p{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.memory_zone-boton{
+    display: none;
+}
+.memory_zone-boton button{
+    font-size: .75em !important;
+}
+.standar_calc div{
+    width: 80vw;
+    overflow-x: auto;
+}
+.standar_calc h2{
+    font-weight: 900;
+    font-size: 3em;
+}
+.standar_nums *{
+    font-size: 1.4em;
+}
+.standar_nums{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-rows: 70px repeat(6, 90px);
+    grid-gap: 4px;
+}
+.standar_nums .memory_buttons{
+    display: flex;
+}
+.standar_nums .memory_buttons button{
+    flex: 1;
+    background-color: transparent;
+    transition: .3s all;
+}
+.standar_nums .memory_buttons button:hover{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.standar_nums .memory_buttons button:active{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.standar_nums button{
+    border: 0;
+    outline: none;
+}
+.ope{
+    background-color: #333c;
+}
+.num{
+    background-color: #833c;
+}
+.ope:hover{
+    background-color: #777e;
+}
+.num:hover{
+    background-color: #c77f;
+}
+.ope:active{
+    background-color: #777e;
+}
+.num:active{
+    background-color: #c77f;
+}
+button{
+    color: #fff;
+    transition: .3s all;
+}
+.standar_memory div button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.4em;
+}
+.standar_memory_button-active{
+    border-bottom: 4px solid #822 !important;
+}
+.standar_memory div button:hover{
+    color: #aaa;
+}
+.memory_buttone_query{
+    display: none;
+}
+.fa-trash-alt{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    main .standar{
+        display: grid;
+        grid-template-areas: 
+            "calc calc" 
+            "nums nums" 
+            "nums nums"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+    .standar_memory{
+        display: none;
+    }
+    .standar_nums div:nth-child(2){
+        display: none;
+    }
+    .standar_nums div:nth-child(3){
+        display: none;
+    }
+    .standar_nums div:nth-child(4){
+        display: none;
+    }
+    .memory_buttone_query{
+        display: block;
+    }
+    .memory_buttons{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .standar_calc div{
+        width: 95vw;
+        overflow-x: auto;
+    }
+}
+

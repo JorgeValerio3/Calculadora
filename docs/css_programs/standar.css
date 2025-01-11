@@ -1,0 +1,161 @@
+main .standar{
+    display: grid;
+    grid-template-areas: 
+        "calc memory" 
+        "nums memory" 
+        "nums memory"
+    ;
+    grid-template-columns: 80vw 1fr;
+}
+.standar_calc{
+    grid-area: calc;
+    text-align: right;
+}
+.standar_nums{
+    grid-area: nums;
+}
+.standar_memory{
+    grid-area: memory;
+    text-align: left;
+    padding: .5em 2em;
+}
+#memory_zone {
+    text-align: right;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+#memory_zone article{
+    font-size: 1.5em;
+    padding: 1em;
+    margin: auto;
+    max-width: 6vw;
+    overflow-x: auto;
+}
+#memory_zone article:hover{
+    background-color: #777f;
+}
+.memory_zone-num-p{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.memory_zone-boton{
+    display: none;
+}
+.memory_zone-boton button{
+    font-size: .75em !important;
+}
+.standar_calc div{
+    width: 80vw;
+    overflow-x: auto;
+}
+.standar_calc h2{
+    font-weight: 900;
+    font-size: 3em;
+}
+.standar_nums *{
+    font-size: 1.4em;
+}
+.standar_nums{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-rows: 70px repeat(6, 90px);
+    grid-gap: 4px;
+}
+.standar_nums .memory_buttons{
+    display: flex;
+}
+.standar_nums .memory_buttons button{
+    flex: 1;
+    background-color: transparent;
+    transition: .3s all;
+}
+.standar_nums .memory_buttons button:hover{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.standar_nums .memory_buttons button:active{
+    background-color: #333f;
+    border: 1px solid #999;
+}
+.standar_nums button{
+    border: 0;
+    outline: none;
+}
+.ope{
+    background-color: #333c;
+}
+.num{
+    background-color: #833c;
+}
+.ope:hover{
+    background-color: #777e;
+}
+.num:hover{
+    background-color: #c77f;
+}
+.ope:active{
+    background-color: #777e;
+}
+.num:active{
+    background-color: #c77f;
+}
+button{
+    color: #fff;
+    transition: .3s all;
+}
+.standar_memory div button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1.4em;
+}
+.standar_memory_button-active{
+    border-bottom: 4px solid #822 !important;
+}
+.standar_memory div button:hover{
+    color: #aaa;
+}
+.memory_buttone_query{
+    display: none;
+}
+.fa-trash-alt{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    main .standar{
+        display: grid;
+        grid-template-areas: 
+            "calc calc" 
+            "nums nums" 
+            "nums nums"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+    .standar_memory{
+        display: none;
+    }
+    .standar_nums div:nth-child(2){
+        display: none;
+    }
+    .standar_nums div:nth-child(3){
+        display: none;
+    }
+    .standar_nums div:nth-child(4){
+        display: none;
+    }
+    .memory_buttone_query{
+        display: block;
+    }
+    .memory_buttons{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .standar_calc div{
+        width: 95vw;
+        overflow-x: auto;
+    }
+}
