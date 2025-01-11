@@ -1,15 +1,15 @@
-import { dark_mode } from "./module/dark_mode.js";
-import { loadProgram } from "./module/loadProgram.js";
-import { standar } from "./module/standar.js";
-import { scientific } from "./module/scientific.js";
-import { date_calculation } from "./module/date_calculation.js";
-import { currency } from "./module/currency.js";
-import { temperature } from "./module/temperature.js";
-import { length } from "./module/length.js";
-import { angle } from "./module/angle.js";
-//import { data } from "./module/data.js";
-//import { pressure } from "./module/pressure.js";
-import { stdConverter } from "./module/stdConverter.js";
+import { dark_mode } from "https://jorgevalerio3.github.io/Calculadora/module/dark_mode.js";
+import { loadProgram } from "https://jorgevalerio3.github.io/Calculadora/module/loadProgram.js";
+import { standar } from "https://jorgevalerio3.github.io/Calculadora/module/standar.js";
+import { scientific } from "https://jorgevalerio3.github.io/Calculadora/module/scientific.js";
+import { date_calculation } from "https://jorgevalerio3.github.io/Calculadora/module/date_calculation.js";
+import { currency } from "https://jorgevalerio3.github.io/Calculadora/module/currency.js";
+import { temperature } from "https://jorgevalerio3.github.io/Calculadora/module/temperature.js";
+import { length } from "https://jorgevalerio3.github.io/Calculadora/module/length.js";
+import { angle } from "https://jorgevalerio3.github.io/Calculadora/module/angle.js";
+//import { data } from "https://jorgevalerio3.github.io/Calculadora/module/data.js";
+//import { pressure } from "https://jorgevalerio3.github.io/Calculadora/module/pressure.js";
+import { stdConverter } from "https://jorgevalerio3.github.io/Calculadora/module/stdConverter.js";
 
 const d = document,
     aside = d.querySelector(".aside");
