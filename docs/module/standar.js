@@ -1,6 +1,5 @@
 let varUltimoNum = "", puntos = "0", punto = false, ultimoBotonPresionado = false, vezPuntoEnCuadrado = 0, vezPuntoRaizCuadrada = 0; 
 export function standar(boton) {
-    //console.log("HOLA MMG");
     const zonaOpe = document.getElementById("zona-operaciones"),
         zonaIngre = document.getElementById("numero-ingresado");
     function Clear() {
