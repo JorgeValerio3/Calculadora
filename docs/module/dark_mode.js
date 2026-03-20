@@ -12,7 +12,7 @@ export function dark_mode(e) {
     if (e.type === "click") {
         if (localStorage.getItem("darkMode") === "light") dark();
         else if (localStorage.getItem("darkMode") === "dark") light();
-        else dark();
+        else light();
     } else {
         if (localStorage.getItem("darkMode") === "light") light();
         else if (localStorage.getItem("darkMode") === "dark") dark();
